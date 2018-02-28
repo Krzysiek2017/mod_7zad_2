@@ -14,7 +14,7 @@ function createComment(text) {
   };
 }
 
-function editComment(text) {
+function editComment(id, text) {
   return {
     type: EDIT_COMMENT,
     text,
@@ -22,7 +22,7 @@ function editComment(text) {
   };
 }
 
-function removeComment(text) {
+function removeComment(id) {
   return {
     type: REMOVE_COMMENT,
     id
@@ -42,3 +42,5 @@ function thumbDownComment(id) {
     id
   };
 }
+
+const boundCreateComment = text => dispatch(createComment(text));
