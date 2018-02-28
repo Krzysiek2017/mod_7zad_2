@@ -6,7 +6,7 @@ export const REMOVE_COMMENT = "REMOVE_COMMENT";
 export const THUMB_UP_COMMENT = "THUMB_UP_COMMENT";
 export const THUMB_DOWN_COMMENT = "THUMB_DOWN_COMMENT";
 
-function createComment(text) {
+export function createComment(text) {
   return {
     type: CREATE_COMMENT,
     text,
@@ -14,7 +14,7 @@ function createComment(text) {
   };
 }
 
-function editComment(id, text) {
+export function editComment(id, text) {
   return {
     type: EDIT_COMMENT,
     text,
@@ -22,25 +22,23 @@ function editComment(id, text) {
   };
 }
 
-function removeComment(id) {
+export function removeComment(id) {
   return {
     type: REMOVE_COMMENT,
     id
   };
 }
 
-function thumbUpComment(id) {
+export function thumbUpComment(id) {
   return {
     type: THUMB_UP_COMMENT,
     id
   };
 }
 
-function thumbDownComment(id) {
+export function thumbDownComment(id) {
   return {
     type: THUMB_DOWN_COMMENT,
     id
   };
 }
-
-const boundCreateComment = text => dispatch(createComment(text));
